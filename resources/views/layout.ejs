@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+    <nav class="container flex items-center justify-between w-full">
+        <div class="w-1/6">
+            <!-- <a href="/"><img src="/img/logo.png" alt="logo" width="100%" height="100%"></a> -->
+           <a href="/"> <h1 class="text-4xl font-bold px-2 py-5 ">Food<span style="color: #FE5F1E;">Hub</span></h1></a>
+        </div>
+        <div>
+            <ul class="flex items-center">
+                <li class="ml-6"><a href="/" class="text-xl font-semibold text-gray-700">Home</a></li>
+                <li class="ml-6"><a href="/menu" class="text-xl font-semibold text-gray-700">Menu</a></li>
+              
+                <% if(user) { %>
+                    <% if(user.role === 'customer') { %>
+                    <li class="ml-6"><a href="/orders" class="text-xl font-semibold text-gray-700">My Orders</a></li>
+                    <% } else { %>
+                    <li class="ml-6"><a href="/admin/orders" class="text-xl font-semibold text-gray-700">All Orders</a></li>
+                <% } %>
+                <li class="ml-6">
+               
+                    <form id="logout" action="/logout" method="POST">
+                        <a onclick="document.getElementById('logout').submit()" href="#" class="text-xl font-semibold text-gray-700">Logout</a>
+                    </form>
+                  
+                </li>
+                <% } else { %>
+                <li class="ml-6"><a href="/register" class="text-xl font-semibold text-gray-700">Register</a></li>
+                <li class="ml-6"><a href="/login" class="text-xl font-semibold text-gray-700">Login</a></li>
+                <% } %>
+
+                <% if(user ) { %>
+                    <% if(user.role === 'customer') { %>
+                    <li class="ml-6"><a href="/cart" class="logout inline-block px-4 py-2 rounded-full flex items-center">
+                        <span id="cartCounter"
+                            class="text-white font-bold pr-2"><%= session.cart ? session.cart.totalQty : '' %></span>
+                        <img src="/img/cart.png" alt="">
+                </a>
+            </li>
+            <% } %>
+            <% } %>
+               
+            </ul>
+        </div>
+    </nav>
+    <%- body %>
+  
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>

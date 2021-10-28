@@ -1,0 +1,431 @@
+<style>
+
+.button__primary {
+    background-image: linear-gradient(
+      to right,
+      #ff512f 0%,
+      #dd2476 51%,
+      #ff512f 100%
+    );
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .button__primary:focus{
+    outline: none;
+  }
+  
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+     .hero__container {
+    margin-top:  18px ;
+    /* width: 100%; */
+
+  }
+  .hero__image__container {
+    position: relative;
+    /* width: 100%; */
+  }
+
+  .hero__image__shape{
+    position: absolute;
+     /* right: 2; */
+  }
+  
+  .hero__image {
+    
+    position: absolute;
+    margin-top: 10px;
+    /* right: auto;
+    left: auto; */
+    width: 100%;
+    z-index: 2;
+    border-radius: 10px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  .hero__text {
+    font-size: 30px;
+    color: #1d3557;
+    margin: 20px 0;
+  }
+
+  
+  /*vedio conatiner  */
+
+  .video__footage__container{
+     margin-top: 40px;
+     width: 100%;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .video__fotage{
+     position: relative;
+   }
+
+   .vedio__footage__text{
+    color: #1d3557;
+    margin-top: 25px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+   }
+
+   .restaurants__description{
+    font-size: 30px;
+    color: #1d3557;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .restaurants__flex__row__one , 
+  .restaurants__flex__row__two{
+        width: 100%;
+        display: flex;
+        gap:5px
+  }
+  
+  .restaurants__flex__row__one{
+   align-items: baseline;
+   margin-bottom: 4px;
+  }
+
+  .restaurant__1__image,
+  .restaurant__2__image,
+  .restaurant__3__image,
+  .restaurant__4__image{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+  }
+
+  .restaurant__1,
+  .restaurant__4
+ {
+      width: 100%;
+      height: 150px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .restaurant__2,
+  .restaurant__3{
+      width: 120%;
+      height: 200px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* form */
+
+  .email__subscribe__container{
+    
+    width: 100%;
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .email__subscribe__input__field{
+    display: flex;
+    align-items: center;
+  
+
+  }
+
+  .email__input {
+    border: 1px solid #ee89a0;
+   
+    background-color: #fcedf0;
+    color: #1d3557;
+    font-weight: 700;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  
+  .email__input::placeholder {
+    color: #bdbcbc;
+  }
+
+  .email__heading{
+    font-size: 30px;
+    color: #1d3557;
+    margin: 20px 0;
+  }
+
+  .quote__container{
+    background: url("https://images.unsplash.com/photo-1522336572468-97b06e8ef143?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    border-radius: 12px;
+    height: 200px;
+    position: relative;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  margin-top: 12px;
+  }
+
+   .quote_image_overlay{
+     position: absolute;
+     height: 200px;
+     width: 100%;
+     border-radius: 13px;
+     background-color: #0a4065;
+     opacity: 49%;
+   }
+
+   .quote_image_text {
+    color: #fff;
+    z-index: 3;
+    margin: 0 18px;
+    text-align: center;
+  }
+
+
+  /* footer */
+
+  footer{
+    margin-top: 20px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  ); */
+  background-color: #f3ede1;
+  padding-bottom: 20px;
+  border-radius: 12px 12px 0 0;
+  padding: 20px 0;
+  }
+
+  
+  footer > ul > li {
+    list-style: none;
+    line-height: 30px;
+  }
+
+ 
+  footer > ul > li:hover {
+   color: #FE5F1E;
+   cursor: pointer;
+  }
+
+   @media (min-width: 768px) {
+    
+    .button__primary {
+      padding: 12px 20px;
+      font-size: 20px;
+    }
+    .hero__container {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .restaurants__description{
+      
+      font-size: 40px;
+      width: 100%;
+    }
+
+    .restaurants__container{
+      display: flex;
+      /* gap: 500px; */
+     
+      /* justify-content: space-between; */
+      align-items: center;
+    }
+    
+    .restaurants__flex{
+      width: 100%;
+    }
+    .email__subscribe__container{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .email__input {
+      width: 360px;
+      height: 48px;
+      font-size: 20px;
+    }
+    .quote__container {
+      height: 300px;
+      width: 100%;
+    }
+    .quote_image_overlay {
+     
+      height: 300px;
+      width: 100%;
+      border-radius: 13px;
+      background-color: #0a4065;
+      opacity: 49%;
+    }
+    .quote_image_text {
+      color: #fff;
+      z-index: 3;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    footer{
+      margin-top: 45px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+}
+
+@media (min-width: 1020px) {
+    .container {
+        max-width: 1080px;    /*  actual 900px */
+    }
+  
+    .hero__text {
+      font-size: 45px;
+    }
+
+    .restaurants__container{
+      margin-top: 30px;
+    }   
+    .email__input {
+      width: 520px;
+      margin-right: 20px;
+     
+    } 
+}
+
+@media (min-width: 1400px) {
+    .container {
+      max-width: 1250px;
+    }
+  }
+
+</style>
+
+<div class="container">
+    <!-- Hero Section -->
+    <section class="hero__container ">
+        <div class="hero__image__container  w-5/12">
+          <img class="hero__image  w-full " src="/img/hero.jpg" alt="hero image" />
+          <img src="/img/svg/heroShape.svg" alt="hero iamge shape" class="hero__image__shape">
+          <img src="/img/svg/herobgpattren.svg" alt="hero image shape" class="hero__image__pattern">
+        </div>
+        <div class="hero__description">
+          <h1 class="hero__text">
+            Are you hungry? Don't wait !
+          </h1>
+        <a href="/menu"><button class="button__primary">Order now</button></a>  
+        </div>
+      </section>
+
+      <!-- video section -->
+  
+      <section class="video__footage__container">
+        <div class="video__fotage">
+          <iframe src="https://player.vimeo.com/video/323795266" frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen class="chef__video">
+          </iframe>
+        </div>
+        <div class="vedio__footage__text">
+          <p style="font-size: 30px;">
+            Your food will be prepared safely with an experienced chef, without
+            compromising on the quality and hygiene.
+          </p>
+        </div>
+      </section>
+
+
+       <!-- restaurants -->
+    <section class="restaurants__container">
+      <h1 class="restaurants__description">Explore Our Menu</h1>
+      <!-- <div style="display: flex; flex-direction: column; align-items: center;">
+        <h1 class="restaurants__description">Explore Our Menu</h1>
+       <a href="/menu"> <button class="button__primary">Explore</button></a>
+
+      </div> -->
+      <div class="restaurants__flex">
+        <div class="restaurants__flex__row__one">
+          <div class="restaurant__1">
+            <img class="restaurant__1__image" src="./img/food1.jpg" alt="restaurant__1" />
+          </div>
+          <div class="restaurant__2">
+            <img class="restaurant__2__image" src="./img/food2.jpg" alt="restaurant__2" />
+          </div>
+        </div>
+        <div class="restaurants__flex__row__two">
+          <div class="restaurant__3">
+            <img class="restaurant__3__image" src="./img/food3.jpg" alt="restaurant__3" />
+          </div>
+          <div class="restaurant__4">
+            <img class="restaurant__4__image" src="./img/food4.jpg" alt="restaurant__4" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- form -->
+
+    <section class="email__subscribe__container mt-10">
+      <div>
+        <h1 class="email__heading">Stay Updated</h1>
+        <div class="email__subscribe__inpu__field">
+
+          <input type="email" name="" id="" class="email__input" placeholder="xyz@email.com">
+          <button class="button__primary">Get Updates</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- quote section -->
+
+    <section class="quote__container">
+      <div class="quote_image_overlay"></div>
+      <h3 class="quote_image_text">
+        When a man's stomach is full it makes no difference whether he is rich
+        or poor.
+      </h3>
+    </section>
+
+  </main>
+
+  
+</div>
+
+
+<footer>
+   
+  <a href="/"> <h1 class="text-4xl font-bold px-2 py-5 ">Food<span style="color: #FE5F1E;">Hub</span></h1></a>
+    <ul>
+      <li>Pricing</li>
+      <li>Terms and condition</li>
+      <li>Partnership</li>
+      <li>Career</li>
+      <li>Contact</li>
+    </ul>
+</footer>
+
+
