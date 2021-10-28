@@ -11,20 +11,6 @@ function authController() {
         login(req, res) {
             res.render('auth/login')
         },
-        googleLogin(req, res) {
-            passport.use(new GoogleStrategy({
-                clientID: 156616097523-gsrbdhv140grd10ui5pv9e0bcf41ccm0.apps.googleusercontent.com,
-                clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-                callbackURL: "http://localhost:3300/auth/google/callback"
-              },
-              function(accessToken, refreshToken, profile, done) {
-                  userProfile=profile;
-                  return done(null, userProfile);
-              }
-            ));
-
-            passport.authenticate('google', { scope : ['profile', 'email'] })
-        },
         postLogin(req, res, next) {
             const { email, password }   = req.body
            // Validate request 
